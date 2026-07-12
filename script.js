@@ -37,16 +37,15 @@ function prevPage() {
     }
 }
 
-// ANA SAYFAYA DÖN FONKSİYONU
 function goHome() {
     for (let i = 0; i < pages.length; i++) {
         pages[i].classList.remove('turned');
     }
     currentPage = 0;
+    pages[0].scrollTo(0, 0); // Ana sayfaya dönünce en üste çıkar
     updateNav();
 }
 
-// KLAVYE YÖN TUŞLARI
 document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowRight') {
         nextPage();
@@ -55,26 +54,38 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-// MOBİL PARMAK KAYDIRMA (SWIPE)
+// MOBİL PARMAK KAYDIRMA (SWIPE) - GÜNCELLENDİ
 let touchStartX = 0;
+let touchStartY = 0;
 let touchEndX = 0;
+let touchEndY = 0;
 
 document.addEventListener('touchstart', e => {
     touchStartX = e.changedTouches[0].screenX;
-});
+    touchStartY = e.changedTouches[0].screenY;
+}, { passive: true });
 
 document.addEventListener('touchend', e => {
     touchEndX = e.changedTouches[0].screenX;
+    touchEndY = e.changedTouches[0].screenY;
     handleSwipe();
-});
+}, { passive: true });
 
 function handleSwipe() {
     const swipeThreshold = 50; 
-    if (touchEndX < touchStartX - swipeThreshold) {
-        nextPage(); 
-    }
-    if (touchEndX > touchStartX + swipeThreshold) {
-        prevPage(); 
+    
+    // Yatay ve dikey hareket mesafesini hesapla
+    const diffX = Math.abs(touchEndX - touchStartX);
+    const diffY = Math.abs(touchEndY - touchStartY);
+
+    // Sadece yatay hareket (sağa/sola) dikey hareketten (aşağı/yukarı) büyükse sayfayı çevir!
+    // Bu sayede metni okumak için aşağı kaydırırken yanlışlıkla sayfa geçmez.
+    if (diffX > diffY && diffX > swipeThreshold) {
+        if (touchEndX < touchStartX) {
+            nextPage(); 
+        } else {
+            prevPage(); 
+        }
     }
 }
 
