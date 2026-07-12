@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Başrol Sensin, Defne!</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- KİTAP TAŞIYICISI (SLIDER) -->
+    <div id="book-container">
+        <div id="book-slider">
+            
+            <!-- SAYFA 0: KAPAK -->
+            <div class="page hero-page">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <div class="badge">Hikayenin Başrolü 🌟</div>
+                    <h1 class="main-title">Defne</h1>
+                    
+                    <div class="intro-text">
+                        <p>Merhaba! Ben Defne. Tam 9 yaşındayım ve Antalya'da yaşıyorum. ☀️</p>
+                        <p>Kendi hayatımın başrolünde olduğum "Defne ve Manifest: Antalya’da Sürpriz Doğum Günü" hikayesine hoş geldiniz! 📖✨</p>
+                        <p>Dans etmeye, yeni figürler öğrenmeye ve tabii ki Manifest grubunun şarkılarına bayılırım! 🎶💃</p>
+                        <p>Minik kuzenim Beren ile vakit geçirmek ve onu kıkırdatmak en sevdiğim şeylerden biridir. 👶💖</p>
+                        <p class="highlight-text">Havuz başındaki doğum günü partimde beni bekleyen o devasa sürprizi öğrenmek ister misiniz? 🚐🤫</p>
+                    </div>
+
+                    <button class="start-btn" onclick="nextPage()">Hikayeyi Oku ➡️</button>
+                </div>
+            </div>
+
+            <!-- SAYFA 1: BÖLÜM 1 -->
+            <div class="page story-page">
+                <img src="images/1.jpeg" alt="Bölüm 1 Görseli" class="chapter-img">
+                <div class="chapter-content">
+                    <h2 class="book-title">Defne ve Manifest: Antalya’da Sürpriz Doğum Günü</h2>
+                    <h3>1. Bölüm: Havuz Başında Tatlı Bir Telaş</h3>
+                    <div class="chapter-text">
+                        <p>Antalya’nın sımsıcak, pırıl pırıl bir yaz sabahında, sitenin devasa havuzunun etrafında tatlı bir telaş vardı. Rengarenk balonlar şişiriliyor, masalar süsleniyordu. Çünkü bugün çok özel bir gündü; Defne tam 9 yaşına basıyordu!</p>
+                        <p>Defne'nin doğum günü partisinin teması, tabii ki en büyük tutkusu olan Manifest grubuydu. Teyzesi Beste, havuz kenarındaki büyük hoparlörden Manifest'in "Zamansızdık" şarkısını açmıştı bile. Defne heyecanla grubun o meşhur koreografilerini saniye saniye sergilerken, onun en büyük hayranı teyzesinin kucağında oturan, henüz 10 aylık minik kuzeni Beren'di. Defne zıplayıp dans ettikçe Beren kıkırdar, pusetinden sarkıp tombik ellerini birbirine vurarak ona eşlik etmeye çalışırdı. Annesi Ezgi şezlongdan onlara sevgiyle bakarken, anneannesi Ebru, Defne'nin doğum günü pastasının yanına buz gibi limonatalar hazırlıyordu.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SAYFA 2: BÖLÜM 2 -->
+            <div class="page story-page">
+                <img src="images/2.jpeg" alt="Bölüm 2 Görseli" class="chapter-img">
+                <div class="chapter-content">
+                    <h3>2. Bölüm: Beklenmedik Misafirler</h3>
+                    <div class="chapter-text">
+                        <p>Defne tam "Arıyo" şarkısının en zor dans figürünü yapıp minik Beren'i güldürmeye çalışırken, sitenin kapısından içeri devasa, simsiyah ve camları filmli bir karavan girdi. Sitenin güvenliği şaşkınlıkla aracı izlerken, karavan doğrudan havuzun yanındaki geniş otoparka yanaştı.</p>
+                        <p>Minik Beren parmağıyla kocaman arabayı işaret edip "Baaa!" diye sesler çıkarırken karavanın kapısı açıldı. Önce havalı spor ayakkabılar, ardından renkli güneş gözlükleri göründü. Defne’nin gözleri kocaman oldu. Elindeki süsleme balonu usulca yere düştü. Gelenler Esin, Lidya, Mina, Sueda, Hilal ve Zeynep'ti... Manifest grubu tam karşılarındaydı!</p>
+                        <p>Defne heyecandan donakalmıştı. Esin, havuz kenarındaki "İyi ki Doğdun Defne!" yazılı pankartı görüp kocaman gülümsedi ve onlara doğru yürüdü. "Merhaba! Doğum günü partinizi bölüyoruz galiba ama akşamki Antalya konserimiz için gizli bir prova yapacak, basından uzak sakin bir yer arıyorduk. Sitenizin havuzu çok güzel görünüyordu. Bize de aranızda biraz yer açar mısınız?"</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SAYFA 3: BÖLÜM 3 -->
+            <div class="page story-page">
+                <img src="images/3.jpeg" alt="Bölüm 3 Görseli" class="chapter-img">
+                <div class="chapter-content">
+                    <h3>3. Bölüm: Operasyon: Doğum Günü Sahnesi</h3>
+                    <div class="chapter-text">
+                        <p>Defne, şaşkınlığını üzerinden atıp anında sitenin fahri menajeri moduna girdi! "Tabii ki!" dedi gururla. "Burası benim doğum günü sahnem, ama bugünlük sizinle seve seve paylaşabilirim!"</p>
+                        <p>Tüm aile anında seferber oldu. Dedesi Atilla, yılların tecrübesiyle havuzun yanındaki ahşap platformun altını üstünü hızlıca inceleyip, "Kızlar, burası oldukça sağlam, prova için gönül rahatlığıyla kullanabilirsiniz," diyerek teknik onayı verdi.</p>
+                        <p>Anneannesi Ebru, Manifest üyeleri için hazırladığı özel doğum günü ikramlarını ve meyve tabaklarını hemen sahne kenarına taşıdı. Annesi Ezgi ve teyzesi Beste ise sitedeki komşulara haber uçurarak herkesin sessizce izlemesini tembihlediler. Bu sırada babası Hilmi, gün ışığının en dik ve parlak olduğu bu saatlerde ışık patlamalarını önlemek için telefon kamerasının pozlama ayarlarını ustalıkla yapıyor, kızının bu tarihi anını en net haliyle ölümsüzleştirmeye hazırlanıyordu.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SAYFA 4: BÖLÜM 4 -->
+            <div class="page story-page">
+                <img src="images/4.jpeg" alt="Bölüm 4 Görseli" class="chapter-img">
+                <div class="chapter-content">
+                    <h3>4. Bölüm: Müzik Durduğunda</h3>
+                    <div class="chapter-text">
+                        <p>Prova harika başlamıştı. Manifest, sadece Defne'ye özel olarak "Başrol Sensin" şarkısını söylerken Defne de sahnenin hemen kenarında onlara dansıyla eşlik ediyordu. Minik Beren ise annesinin kucağında müziğin ritmine kapılmış, neşeyle sallanıyordu.</p>
+                        <p>Tam şarkının en coşkulu yerinde, güm! Sitenin elektrikleri kesildi. Müzik sustu, hoparlörler kapandı.</p>
+                        <p>Manifest üyeleri şaşkınlıkla birbirine bakarken, Defne derin bir nefes aldı. "Pes etmek yok!" dedi fısıldayarak. Defne, grubun "Amatör" şarkısının ritmini elleriyle tutmaya başladı. Alkışlarla güçlü bir ritim oluşturdu. Onu gören minik Beren de neşeyle kıkırdayıp minik ellerini çırpmaya başladı. Lidya ve Mina, Beren'in bu tatlı haline dayanamayıp gülümseyerek alkışlara katıldı. Ardından Sueda, Hilal, Zeynep ve Esin... Elektriksiz, mikrofonsuz, sadece alkışlar, Defne'nin enerjisi ve Beren'in kıkırdamaları eşliğinde havuz başında harika bir akustik performans başladı. Şarkının sonunda tüm grup hep bir ağızdan "İyi ki doğdun Defne!" diye bağırdı.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SAYFA 5: BÖLÜM 5 (SON) -->
+            <div class="page story-page">
+                <img src="images/5.jpeg" alt="Bölüm 5 Görseli" class="chapter-img">
+                <div class="chapter-content">
+                    <h3>5. Bölüm: En Güzel Hediye</h3>
+                    <div class="chapter-text">
+                        <p>Elektrikler yarım saat sonra geldiğinde, Manifest provasını çoktan tamamlamış, Defne'nin pastasını kesmiş ve aileyle harika bir bağ kurmuştu. Karavana binmeden önce Esin, sırt çantasından grubun tüm üyelerinin imzaladığı "Manifestival" albümünü çıkarıp Defne’ye uzattı. Daha sonra eğilip minik Beren'in yanağına yumuşak bir öpücük kondurdu.</p>
+                        <p>"Bizi kurtardığın ve harika ritmin için teşekkürler Defne. Bu albüm senin 9. yaş günü hediyen. Ve tabii ki, akşamki konserimizin en özel VIP konuğu da sensin!" dedi Lidya göz kırparak.</p>
+                        <p>Karavan siteden uzaklaşırken Defne bir elindeki imzalı albüme, bir de pusetinde yorgunluktan uyuyakalmış olan minik Beren'e baktı. Antalya'nın ılık rüzgarı saçlarını havalandırırken gülümsedi. Bu hayatta alabileceği en güzel doğum günü hediyesini almıştı. Artık emindi; kendi hikayesinin ve bu unutulmaz yeni yaşın gerçek başrolü kesinlikle kendisiydi.</p>
+                    </div>
+                    <div class="book-end">
+                        <p>~ Sonu ~</p>
+                        <p class="footer-note">Defne için sevgiyle hazırlandı ❤️ 2026</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ALT YÖNLENDİRME ÇUBUĞU (Kapakta gizli olacak) -->
+    <div id="nav-bar">
+        <button id="prev-btn" onclick="prevPage()">⬅️ Geri</button>
+        <span id="page-indicator">1 / 5</span>
+        <button id="next-btn" onclick="nextPage()">İleri ➡️</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
